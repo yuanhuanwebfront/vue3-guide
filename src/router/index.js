@@ -6,7 +6,13 @@ import HomeRoutes from './home/index';
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    ...HomeRoutes
+    {
+      path: '/',
+      component: () => import('@/layout/index.vue'),
+      children: [
+        ...HomeRoutes,
+      ]
+    },
   ]
 })
 
