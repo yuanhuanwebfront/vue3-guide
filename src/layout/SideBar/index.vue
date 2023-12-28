@@ -9,7 +9,7 @@
   <div class="sidebar-container">
     <img src="../../assets/logo.jpg" class="logo">
 
-    <div class="tab-item" v-for="item in menus" :key="item.value">
+    <div class="tab-item" :class="{first: idx == 0}" v-for="(item, idx) in menus" :key="item.value">
       <i class="iconfont" :class="item.icon"></i>
       <span>{{ item.label }}</span>
     </div>
@@ -35,7 +35,7 @@
       padding: 0 20px;
       border-bottom: 1px solid #dbdbdb;
       transition: 0.6s;
-      &:first-child{
+      &.first{
         border-top: 1px solid #dbdbdb;
       }
       &:hover{

@@ -4,7 +4,10 @@ const menuOptions = [
     value: 'online-video',
     icon: 'icon-video',
     list: [
-
+      {
+        label: 'youtube',
+        icon: ''
+      }
     ]
   },
   {
