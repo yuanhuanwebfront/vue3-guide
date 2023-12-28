@@ -1,7 +1,7 @@
 const menuOptions = [
   {
     label: '在线视频',
-    value: 'online-video',
+    path: '/online-video',
     icon: 'icon-video',
     list: [
       {

@@ -1,7 +1,7 @@
 // 导入create函数
 import { createRouter, createWebHashHistory } from 'vue-router';
 // 导入Routes
-import HomeRoutes from './home/index';
+import OnlineVideoRoutes from './onlineVideo/index';
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -9,8 +9,9 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/layout/index.vue'),
+      redirect: '/online-video',
       children: [
-        ...HomeRoutes,
+        ...OnlineVideoRoutes,
       ]
     },
   ]

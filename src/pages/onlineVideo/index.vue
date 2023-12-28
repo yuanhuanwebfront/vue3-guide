@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  Home
+  <div>online video</div>
 </template>

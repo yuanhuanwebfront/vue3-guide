@@ -1,15 +1,18 @@
 <script setup>
+  import { useRoute } from 'vue-router';
   import useMenu from '@/composition/menu/index';
 
+  const route = useRoute();
   const { menus } = useMenu();
 
+  console.log(route);
 </script>
 
 <template>
   <div class="sidebar-container">
     <img src="../../assets/logo.jpg" class="logo">
 
-    <div class="tab-item" :class="{first: idx == 0}" v-for="(item, idx) in menus" :key="item.value">
+    <div class="tab-item" :class="{first: idx == 0, active: item.path == route.path}" v-for="(item, idx) in menus" :key="item.path">
       <i class="iconfont" :class="item.icon"></i>
       <span>{{ item.label }}</span>
     </div>
@@ -23,6 +26,7 @@
     overflow-y: auto;
     border-right: 1px solid #f1f1f1;
     background: #f2f2f2;
+    flex-shrink: 0;
     .logo{
       width: 100%;
       // border-bottom: 1px solid #dbdbdb;
@@ -38,7 +42,7 @@
       &.first{
         border-top: 1px solid #dbdbdb;
       }
-      &:hover{
+      &:hover, &.active{
         padding-left: 36px;
         color: #409EFF;
       }

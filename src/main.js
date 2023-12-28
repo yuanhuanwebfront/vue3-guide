@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 import router from './router'
 
 import './style.css'
+import './style/common.css';
 import './style/iconfont/iconfont.css'
 import App from './App.vue'
 
