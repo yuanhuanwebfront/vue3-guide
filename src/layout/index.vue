@@ -12,6 +12,6 @@
 
 <style lang="scss" scoped>
   .layout-container{
-
+    align-items: flex-start;
   }
 </style>
