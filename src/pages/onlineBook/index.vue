@@ -5,6 +5,8 @@
 
   const { cptPathMenus } = useMenus();
 
+  console.log(cptPathMenus)
+
 </script>
 
 <template>

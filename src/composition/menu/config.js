@@ -1,4 +1,5 @@
 import onlineVideoList from "./online-video";
+import onlineBookList from "./online-book";
 
 const menuOptions = [
   {
@@ -11,10 +12,10 @@ const menuOptions = [
   },
   {
     label: '在线图书',
-    value: 'online-book',
+    path: '/online-book',
     icon: 'icon-book',
     list: [
-
+      ...onlineBookList
     ]
   }
 ];

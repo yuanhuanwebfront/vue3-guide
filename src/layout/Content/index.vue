@@ -4,7 +4,9 @@
 
 <template>
   <div class="router-container">
-    <router-view></router-view>
+    <Transition name="slide-fade">
+      <router-view></router-view>
+    </Transition>
   </div>
 </template>
 
@@ -15,5 +17,18 @@
   background-color: #fff;
   flex-grow: 1;
   padding: 20px;
+}
+.slide-fade-enter-active {
+  transition: all 0.6s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.6s linear;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-30px);
+  opacity: 0;
 }
 </style>

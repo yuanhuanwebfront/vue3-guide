@@ -1,18 +1,24 @@
 <script setup>
-  import { useRoute } from 'vue-router';
+  import { useRoute, useRouter } from 'vue-router';
   import useMenu from '@/composition/menu/index';
 
   const route = useRoute();
+  const router = useRouter();
   const { menus } = useMenu();
 
-  console.log(route);
+  function pushRoute(rou){
+    router.push({
+      path: rou.path
+    }) 
+  }
 </script>
 
 <template>
   <div class="sidebar-container">
     <img src="../../assets/logo.jpg" class="logo">
 
-    <div class="tab-item" :class="{first: idx == 0, active: item.path == route.path}" v-for="(item, idx) in menus" :key="item.path">
+    <div class="tab-item" @click="pushRoute(item)" :class="{first: idx == 0, active: item.path == route.path}" 
+      v-for="(item, idx) in menus" :key="item.path">
       <i class="iconfont" :class="item.icon"></i>
       <span>{{ item.label }}</span>
     </div>
