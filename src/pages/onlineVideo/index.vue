@@ -14,7 +14,8 @@
         <div class="font-24">{{ tab.label }}</div>
       </n-divider>
       <div class="flex link-container">
-        <LinkItem v-for="item in tab.list" :key="item.label" :icon="item.icon" :label="item.label"></LinkItem>
+        <LinkItem v-for="item in tab.list" :key="item.label" 
+          :icon="item.icon" :label="item.label" :link="item.link"></LinkItem>
       </div>
     </div>
   </div>

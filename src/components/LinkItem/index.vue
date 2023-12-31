@@ -3,14 +3,19 @@
 
   const props = defineProps({
     icon: String,
-    label: String
+    label: String,
+    link: String
   })
+
+  function openLink(){
+    window.open(props.link)
+  }
 </script>
 
 <template>
-  <div class="font-16 flex link-item-box">
+  <div class="font-16 flex link-item-box" @click="openLink">
     <img :src="props.icon">
-    <!-- <div class="title">{{ props.label }}</div> -->
+    <div class="title">{{ props.label }}</div>
   </div>
 </template>
 
@@ -18,13 +23,43 @@
   .link-item-box{
     cursor: pointer;
     justify-content: center;
-    width: 150px;
-    height: 150px;
-    border: 1px solid #f1f1f1;
-    margin-right: 60px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #d1d1d1;
+    margin-right: 30px;
+    border-radius: 12px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
     img{
-      width: 120px;
-      height: 120px;
+      width: 90px;
+      height: 90px;
+      transition: 0.5s;
+    }
+    .title{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0px;
+      height: 30px;
+      line-height: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      color: #fff;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      transition: 0.5s;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+    &:hover{
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      img{
+        transform: scale(1.06);
+      }
+      .title{
+        bottom: -60px;
+      }
     }
   }
 </style>

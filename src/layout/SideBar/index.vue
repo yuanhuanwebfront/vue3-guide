@@ -22,7 +22,8 @@
 <style lang="scss" scoped>
   .sidebar-container{
     width: 200px;
-    height: 100vh;
+    min-height: 100vh;
+    align-items: stretch;
     overflow-y: auto;
     border-right: 1px solid #f1f1f1;
     background: #f2f2f2;
