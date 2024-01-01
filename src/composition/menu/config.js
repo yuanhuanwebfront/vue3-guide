@@ -1,5 +1,6 @@
 import onlineVideoList from "./online-video";
 import onlineBookList from "./online-book";
+import videoDownloadList from "./video-download";
 
 const menuOptions = [
   {
@@ -16,6 +17,14 @@ const menuOptions = [
     icon: 'icon-book',
     list: [
       ...onlineBookList
+    ]
+  },
+  {
+    label: '视频下载',
+    path: '/video-download',
+    icon: 'icon-video-download-line',
+    list: [
+      ...videoDownloadList
     ]
   }
 ];

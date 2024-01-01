@@ -1,6 +1,6 @@
 
-import GuoxuemengIcon from '@/assets/icon/book/guoxuemeng.jpeg';
-import AihanyuIcon from '@/assets/icon/book/aihanyu.png';
+import GuoxuemengIcon from '@/assets/icon/online-book/guoxuemeng.jpeg';
+import AihanyuIcon from '@/assets/icon/online-book/aihanyu.png';
 
 const onlineBookList = [
   {

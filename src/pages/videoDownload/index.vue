@@ -4,7 +4,6 @@
   import LinkItem from '@/components/LinkItem/index.vue';
 
   const { cptPathMenus } = useMenus();
-
 </script>
 
 <template>
@@ -15,7 +14,7 @@
       </n-divider>
       <div class="flex link-container">
         <LinkItem v-for="item in tab.list" :key="item.label" 
-          :icon="item.icon" :label="item.label" :link="item.link" :desc="item.desc"></LinkItem>
+          :icon="item.icon" :label="item.label" :link="item.link"></LinkItem>
       </div>
     </div>
   </div>

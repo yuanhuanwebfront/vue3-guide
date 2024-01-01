@@ -1,10 +1,12 @@
 <script setup>
   import { defineProps } from 'vue';
+  import { NPopover } from 'naive-ui';
 
   const props = defineProps({
     icon: String,
     label: String,
-    link: String
+    link: String,
+    desc: String
   })
 
   function openLink(){
@@ -13,10 +15,15 @@
 </script>
 
 <template>
-  <div class="font-16 flex link-item-box" @click="openLink">
-    <img :src="props.icon">
-    <div class="title">{{ props.label }}</div>
-  </div>
+  <n-popover trigger="hover" placement="top-end" :width="200">
+    <template #trigger>
+      <div class="font-16 flex link-item-box" @click="openLink">
+        <img :src="props.icon">
+        <div class="title">{{ props.label }}</div>
+      </div>
+    </template>
+    <span>{{ props.desc || '' }}</span>
+  </n-popover>  
 </template>
 
 <style lang="scss" scoped>
@@ -33,7 +40,7 @@
     overflow: hidden;
     img{
       width: 90px;
-      height: 90px;
+      height: auto;
       transition: 0.5s;
     }
     .title{
@@ -49,7 +56,7 @@
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
       transition: 0.5s;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       font-size: 14px;
     }
     &:hover{
