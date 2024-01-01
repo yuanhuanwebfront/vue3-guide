@@ -57,7 +57,7 @@
       border-bottom-right-radius: 12px;
       transition: 0.5s;
       letter-spacing: 1px;
-      font-size: 14px;
+      font-size: 13px;
     }
     &:hover{
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;

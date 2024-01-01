@@ -5,6 +5,7 @@ import MovieRabbitIcon from '@/assets/icon/online-video/dianyingtu.png';
 import JrkanIcon from '@/assets/icon/online-video/jrKan.png';
 import HeibaiIcon from '@/assets/icon/online-video/heibai.png';
 import YangshipinIcon from '@/assets/icon/online-video/yangshipin.png';
+import HanjuWangIcon from '@/assets/icon/online-video/hanjuwang.png';
 
 const onlineVideoList = [
   {
@@ -44,6 +45,12 @@ const onlineVideoList = [
         icon: YangshipinIcon,
         link: 'https://www.yangshipin.cn/#/',
         desc: '央视频 - 央视、卫视直播'
+      },
+      {
+        label: '韩剧网',
+        icon: HanjuWangIcon,
+        link: 'https://www.hanritai.com/',
+        desc: '韩剧网-韩剧DVD是国内最大的中文韩剧网站，提供最新韩剧,好看的韩剧在线观看、韩剧收视率、韩剧排行榜、韩剧剧照海报、韩国电影、剧情介绍、韩剧音乐、韩国明星写真、韩剧动态等相关韩剧服务。'
       }
     ]
   },
