@@ -9,18 +9,7 @@ import HanjuWangIcon from '@/assets/icon/online-video/hanjuwang.png';
 
 const onlineVideoList = [
   {
-    label: '国外视频',
-    list: [
-      {
-        label: 'youtube',
-        icon: YoutubeIcon,
-        link: 'https://www.youtube.com',
-        desc: '在 YouTube 上畅享你喜爱的视频和音乐，上传原创内容并与亲朋好友和全世界观众分享你的视频。'
-      }
-    ],
-  },
-  {
-    label: '国内视频',
+    label: '官方视频',
     list: [
       {
         label: '腾讯视频',
@@ -35,10 +24,10 @@ const onlineVideoList = [
         desc: '优酷 - 为好内容全力以赴 - 海量正版高清视频在线观看'
       },
       {
-        label: '电影兔',
-        icon: MovieRabbitIcon,
-        link: 'https://www.dytdy.com/',
-        desc: '电影兔影视涵盖最新电影、电视剧、综艺、动漫、纪录片、微电影等经典影视类型，更新快、观影不卡 、电脑手机平板多终端自适应浏览。'
+        label: 'youtube',
+        icon: YoutubeIcon,
+        link: 'https://www.youtube.com',
+        desc: '在 YouTube 上畅享你喜爱的视频和音乐，上传原创内容并与亲朋好友和全世界观众分享你的视频。'
       },
       {
         label: '央视频',
@@ -46,6 +35,19 @@ const onlineVideoList = [
         link: 'https://www.yangshipin.cn/#/',
         desc: '央视频 - 央视、卫视直播'
       },
+    ],
+  },
+  {
+    label: '第三方影视',
+    list: [
+      
+      {
+        label: '电影兔',
+        icon: MovieRabbitIcon,
+        link: 'https://www.dytdy.com/',
+        desc: '电影兔影视涵盖最新电影、电视剧、综艺、动漫、纪录片、微电影等经典影视类型，更新快、观影不卡 、电脑手机平板多终端自适应浏览。'
+      },
+      
       {
         label: '韩剧网',
         icon: HanjuWangIcon,
@@ -55,7 +57,7 @@ const onlineVideoList = [
     ]
   },
   {
-    label: '比赛直播',
+    label: 'NBA直播',
     list: [
       {
         label: 'JR-KAN直播',

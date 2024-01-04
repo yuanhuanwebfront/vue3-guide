@@ -27,7 +27,7 @@
 
 <style lang="scss" scoped>
   .sidebar-container{
-    width: 200px;
+    width: 240px;
     min-height: 100vh;
     align-items: stretch;
     overflow-y: auto;
@@ -41,17 +41,16 @@
     .tab-item{
       cursor: pointer;
       box-sizing: border-box;
-      height: 46px;
-      line-height: 46px;
+      height: 54px;
+      line-height: 54px;
       padding: 0 20px;
-      border-bottom: 1px solid #dbdbdb;
       transition: 0.6s;
-      &.first{
-        border-top: 1px solid #dbdbdb;
-      }
+      letter-spacing: 2px;
+      font-size: 16px;
       &:hover, &.active{
         padding-left: 36px;
         color: #409EFF;
+        // background-color: #edb0b782;
       }
       .iconfont{
         margin-right: 12px;

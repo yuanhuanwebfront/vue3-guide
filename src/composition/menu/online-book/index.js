@@ -3,6 +3,7 @@ import GuoxuemengIcon from '@/assets/icon/online-book/guoxuemeng.jpeg';
 import AihanyuIcon from '@/assets/icon/online-book/aihanyu.png';
 import GuojiabookIcon from '@/assets/icon/online-book/guojiatushuguan.png';
 import WereadIcon from '@/assets/icon/online-book/weread.png';
+import MarksIcon from '@/assets/icon/online-book/makesi.gif';
 
 const onlineBookList = [
   {
@@ -38,7 +39,17 @@ const onlineBookList = [
         desc: '微信读书提供海量正版书籍、小说、漫画、公众号、听书，多设备同步实现跨屏阅读。与微信好友一起发现更多精品好书，随时交流感想，让阅读不再孤独。'
       }
     ],
-    
+  },
+  {
+    label: '政治书籍',
+    list: [
+      {
+        label: '马克思文库',
+        icon: MarksIcon,
+        link: 'https://www.marxists.org/chinese/index.html',
+        desc: '马克思主义和共产主义历史文献和参考资料'
+      }
+    ]
   }
 ];
 

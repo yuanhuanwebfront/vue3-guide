@@ -1,6 +1,7 @@
 import onlineVideoList from "./online-video";
 import onlineBookList from "./online-book";
 import videoDownloadList from "./video-download";
+import govermentList from "./goverment";
 
 const menuOptions = [
   {
@@ -25,6 +26,14 @@ const menuOptions = [
     icon: 'icon-video-download-line',
     list: [
       ...videoDownloadList
+    ]
+  },
+  {
+    label: '政务部门',
+    path: '/goverment',
+    icon: 'icon-goverment',
+    list: [
+      ...govermentList
     ]
   }
 ];

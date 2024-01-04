@@ -15,7 +15,7 @@
 </script>
 
 <template>
-  <n-popover trigger="hover" placement="top-end" :width="200">
+  <n-popover trigger="hover" placement="top-start" :width="260">
     <template #trigger>
       <div class="font-16 flex link-item-box" @click="openLink">
         <img :src="props.icon">
@@ -62,7 +62,7 @@
     &:hover{
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
       img{
-        transform: scale(1.06);
+        transform: scale(1.09);
       }
       .title{
         bottom: -60px;

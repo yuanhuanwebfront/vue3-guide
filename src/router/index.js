@@ -4,6 +4,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import OnlineVideoRoutes from './onlineVideo/index';
 import OnlineBookRoutes from './onlineBook/index';
 import VideoDownloadRoutes from './videoDownload';
+import GovermentRoutes from './goverment';
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -15,7 +16,8 @@ const router = createRouter({
       children: [
         ...OnlineVideoRoutes,
         ...OnlineBookRoutes,
-        ...VideoDownloadRoutes
+        ...VideoDownloadRoutes,
+        ...GovermentRoutes
       ]
     },
   ]
