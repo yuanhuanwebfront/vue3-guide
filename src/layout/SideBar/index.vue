@@ -50,7 +50,10 @@
       &:hover, &.active{
         padding-left: 36px;
         color: #409EFF;
-        // background-color: #edb0b782;
+        background-color: #a9d9e833;
+      }
+      &.active{
+        background-color: #a9d9e854;
       }
       .iconfont{
         margin-right: 12px;
