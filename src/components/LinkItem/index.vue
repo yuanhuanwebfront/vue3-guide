@@ -42,6 +42,7 @@
       width: 90px;
       height: auto;
       transition: 0.5s;
+      border-radius: 12px;
     }
     .title{
       position: absolute;

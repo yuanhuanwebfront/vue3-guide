@@ -6,6 +6,7 @@ import JrkanIcon from '@/assets/icon/online-video/jrKan.png';
 import HeibaiIcon from '@/assets/icon/online-video/heibai.png';
 import YangshipinIcon from '@/assets/icon/online-video/yangshipin.png';
 import HanjuWangIcon from '@/assets/icon/online-video/hanjuwang.png';
+import NbaReplayIcon from '@/assets/icon/online-video/nbareplay.png';
 
 const onlineVideoList = [
   {
@@ -57,7 +58,7 @@ const onlineVideoList = [
     ]
   },
   {
-    label: 'NBA直播',
+    label: 'NBA直播回放',
     list: [
       {
         label: 'JR-KAN直播',
@@ -70,6 +71,12 @@ const onlineVideoList = [
         icon: HeibaiIcon,
         link: 'http://www.zuliao114.com/',
         desc: '黑白体育直播-提供免费无插件足球直播、nba直播、黑白体育赛事、黑白英超直播、黑白nba直播，所有精彩都在黑白直播体育。'
+      },
+      {
+        label: 'NBA-Video',
+        icon: NbaReplayIcon,
+        link: 'https://basketball-video.com/',
+        desc: 'NBA回放集合，配合外网访问更加流畅。'
       }
     ]
   }
