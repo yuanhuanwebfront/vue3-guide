@@ -5,6 +5,7 @@ import OnlineVideoRoutes from './onlineVideo/index';
 import OnlineBookRoutes from './onlineBook/index';
 import VideoDownloadRoutes from './videoDownload';
 import GovermentRoutes from './goverment';
+import ToolsRoutes from './tools';
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -17,7 +18,8 @@ const router = createRouter({
         ...OnlineVideoRoutes,
         ...OnlineBookRoutes,
         ...VideoDownloadRoutes,
-        ...GovermentRoutes
+        ...GovermentRoutes,
+        ...ToolsRoutes
       ]
     },
   ]

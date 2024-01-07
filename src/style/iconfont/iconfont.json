@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1817683",
+      "name": "工具-3",
+      "font_class": "gongju-",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "6207854",
       "name": "政府机构",
       "font_class": "goverment",

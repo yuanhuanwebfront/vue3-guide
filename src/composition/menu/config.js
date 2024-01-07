@@ -2,6 +2,7 @@ import onlineVideoList from "./online-video";
 import onlineBookList from "./online-book";
 import videoDownloadList from "./video-download";
 import govermentList from "./goverment";
+import toolsList from './tools';
 
 const menuOptions = [
   {
@@ -34,6 +35,14 @@ const menuOptions = [
     icon: 'icon-goverment',
     list: [
       ...govermentList
+    ]
+  },
+  {
+    label: '实用工具',
+    path: '/tools',
+    icon: 'icon-gongju-',
+    list: [
+      ...toolsList
     ]
   }
 ];
