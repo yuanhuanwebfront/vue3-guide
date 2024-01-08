@@ -17,7 +17,7 @@
   <div class="sidebar-container">
     <img src="../../assets/logo.png" class="logo">
 
-    <div class="tab-item" @click="pushRoute(item)" :class="{first: idx == 0, active: item.path == route.path}" 
+    <div class="tab-item" @click="pushRoute(item)" :class="{first: idx == 0, active: route.path.indexOf(item.path) > -1}" 
       v-for="(item, idx) in menus" :key="item.path">
       <i class="iconfont" :class="item.icon"></i>
       <span>{{ item.label }}</span>

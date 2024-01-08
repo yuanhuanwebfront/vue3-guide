@@ -1,16 +1,26 @@
 <script setup>
   import { defineProps } from 'vue';
   import { NPopover } from 'naive-ui';
+  import { useRouter } from 'vue-router';
 
   const props = defineProps({
     icon: String,
     label: String,
     link: String,
-    desc: String
-  })
+    desc: String,
+    type: String
+  });
+
+  const router = useRouter();
 
   function openLink(){
-    window.open(props.link)
+    if(props.type == 'page'){
+      router.push({
+        path: props.link
+      })
+    }else{
+      window.open(props.link)
+    }
   }
 </script>
 

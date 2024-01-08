@@ -8,3 +8,10 @@
 .grid{
   display: grid;
 }
+
+/* text-position */
+.text-r{text-align: right;}
+
+
+/* margin */
+.mr-16{margin-right: 16px;}
