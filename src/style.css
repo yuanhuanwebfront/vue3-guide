@@ -10,3 +10,21 @@
 .font-16{font-size: 16px;}
 .font-20{font-size: 20px;}
 .font-24{font-size: 24px;}
+
+/* flex相关 */
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.align-start{
+  align-items: flex-start;
+}
+
+/* margin相关 */
+.mb-20{margin-bottom: 20px;}
+
+.ml-20{margin-left: 20px;}
+
+.mr-12{margin-right: 12px;}
+.mr-20{margin-right: 20px;}

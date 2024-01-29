@@ -21,9 +21,15 @@ function useCopyBoard(){
     localStorage.setItem(store_key, JSON.stringify(copyList.value));
   }
 
+  function removeCopyItem(idx){
+    copyList.value = copyList.value.filter((item, index) => index != idx);
+    localStorage.setItem(store_key, JSON.stringify(copyList.value));
+  }
+
   return {
     copyList,
-    addCopyItem
+    addCopyItem,
+    removeCopyItem
   }
 
 }

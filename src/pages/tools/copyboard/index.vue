@@ -8,17 +8,21 @@ import {
   NTag,
   NMessageProvider,
   useMessage,
+  useDialog
 } from "naive-ui";
+import EmptyArea from '@/components/Empty/index.vue';
 
-import { Plus } from "@vicons/tabler";
+import { Plus, ClipboardPlus, CircleX } from "@vicons/tabler";
 
 import { ref } from "vue";
 import useCopyBoard from '@/composition/copyBoard';
+import { dialogWarning } from '@/util/dialog';
 
 const modelVisible = ref(false);
 const copyText = ref("");
 const message = useMessage();
-const { copyList, addCopyItem } = useCopyBoard();
+const dialog = useDialog();
+const { copyList, addCopyItem, removeCopyItem } = useCopyBoard();
 
 function cancelDialog() {
   copyText.value = "";
@@ -34,11 +38,37 @@ function confirmDialog() {
   cancelDialog();
   message.success('添加成功');
 }
+
+function deleteTag(idx){
+  dialogWarning(dialog, '请确认！', '确定删除这条记录吗？').then(res => {
+    removeCopyItem(idx);
+  }).catch(err => {})
+}
+
 </script>
 
 <template>
   <div class="copy-list">
-    <n-tag class="copy-tag" size="large" type="success" v-for="(item, idx) in copyList" :key="idx">{{ item }}</n-tag>
+    <template v-if="copyList.length > 0">
+      <div class="flex-box align-start mb-20" v-for="(item, idx) in copyList" :key="idx">
+      <n-tag class="copy-tag mr-20" size="large" type="success" >{{ item }}</n-tag>
+      <n-button class="mr-12 hover-btn" type="info">
+        <n-icon size="20">
+          <ClipboardPlus></ClipboardPlus>
+        </n-icon>
+        <span class="hide-text">&nbsp;复制</span>
+      </n-button>
+      <n-button type="error" @click="deleteTag(idx)">
+        <n-icon size="20">
+          <CircleX></CircleX>
+        </n-icon>
+        <span class="hide-text">&nbsp;删除</span>
+      </n-button>
+      </div>
+    </template>
+    <template v-else>
+      <EmptyArea width="100%" height="100vh" size="80"></EmptyArea>
+    </template>
   </div>
 
 
@@ -89,8 +119,20 @@ function confirmDialog() {
 }
 
 .copy-tag{
-  display: block;
-  margin-bottom: 20px;
+  flex-grow: 1;
   line-height: 34px;
+  overflow: hidden;
+}
+.hover-btn{
+  transition: 0.8s;
+}
+</style>
+
+<style lang="scss">
+.copy-tag{
+  .n-tag__content{
+    display: contents;
+    word-break: break-all;
+  }
 }
 </style>
