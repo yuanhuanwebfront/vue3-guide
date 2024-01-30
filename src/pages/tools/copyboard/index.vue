@@ -57,21 +57,23 @@ function copyTag(text){
 <template>
   <div class="copy-list">
     <template v-if="copyList.length > 0">
-      <div class="flex-box align-start mb-20" v-for="(item, idx) in copyList" :key="idx">
-      <n-tag class="copy-tag mr-20" size="large" type="success" >{{ item }}</n-tag>
-      <n-button class="mr-12" type="info" @click="copyTag(item)">
-        <n-icon size="20">
-          <ClipboardPlus></ClipboardPlus>
-        </n-icon>
-        <span class="hide-text">&nbsp;复制</span>
-      </n-button>
-      <n-button type="error" @click="deleteTag(idx)">
-        <n-icon size="20">
-          <CircleX></CircleX>
-        </n-icon>
-        <span class="hide-text">&nbsp;删除</span>
-      </n-button>
-      </div>
+      <TransitionGroup name="list">
+        <div class="flex-box align-start mb-20" v-for="(item, idx) in copyList" :key="idx">
+          <n-tag class="copy-tag mr-20" size="large" type="success" >{{ item }}</n-tag>
+          <n-button class="mr-12" type="info" @click="copyTag(item)">
+            <n-icon size="20">
+              <ClipboardPlus></ClipboardPlus>
+            </n-icon>
+            <span class="hide-text">&nbsp;复制</span>
+          </n-button>
+          <n-button type="error" @click="deleteTag(idx)">
+            <n-icon size="20">
+              <CircleX></CircleX>
+            </n-icon>
+            <span class="hide-text">&nbsp;删除</span>
+          </n-button>
+        </div>
+      </TransitionGroup>
     </template>
     <template v-else>
       <EmptyArea width="100%" height="100vh" size="80"></EmptyArea>
@@ -120,6 +122,7 @@ function copyTag(text){
   height: 60px;
   bottom: 36px;
   right: 36px;
+  background: #fff;
 }
 .card-area {
   width: 600px;

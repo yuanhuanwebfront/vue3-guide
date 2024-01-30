@@ -5,6 +5,7 @@ import router from './router'
 
 import './style.css'
 import './style/common.css';
+import './style/animate.css';
 import './style/iconfont/iconfont.css'
 import App from './App.vue'
 
