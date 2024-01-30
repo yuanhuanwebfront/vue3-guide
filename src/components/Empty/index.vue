@@ -9,8 +9,8 @@
       default: '400px'
     },
     size: {
-      type: Number,
-      default: 40
+      type: [Number, String],
+      default: '40'
     },
     height: {
       type: String,

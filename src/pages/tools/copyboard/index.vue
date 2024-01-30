@@ -17,6 +17,7 @@ import { Plus, ClipboardPlus, CircleX } from "@vicons/tabler";
 import { ref } from "vue";
 import useCopyBoard from '@/composition/copyBoard';
 import { dialogWarning } from '@/util/dialog';
+import { copyTextByClipboard } from '@/util/util';
 
 const modelVisible = ref(false);
 const copyText = ref("");
@@ -45,6 +46,12 @@ function deleteTag(idx){
   }).catch(err => {})
 }
 
+function copyTag(text){
+  copyTextByClipboard(text).then(res => {
+    message.success('复制成功');
+  })
+}
+
 </script>
 
 <template>
@@ -52,7 +59,7 @@ function deleteTag(idx){
     <template v-if="copyList.length > 0">
       <div class="flex-box align-start mb-20" v-for="(item, idx) in copyList" :key="idx">
       <n-tag class="copy-tag mr-20" size="large" type="success" >{{ item }}</n-tag>
-      <n-button class="mr-12 hover-btn" type="info">
+      <n-button class="mr-12" type="info" @click="copyTag(item)">
         <n-icon size="20">
           <ClipboardPlus></ClipboardPlus>
         </n-icon>
