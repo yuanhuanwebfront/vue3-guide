@@ -3,6 +3,7 @@ import GuoxuemengIcon from '@/assets/icon/online-book/guoxuemeng.jpeg';
 import AihanyuIcon from '@/assets/icon/online-book/aihanyu.png';
 import GuojiabookIcon from '@/assets/icon/online-book/guojiatushuguan.png';
 import WereadIcon from '@/assets/icon/online-book/weread.png';
+import ZLibraryIcon from '@/assets/icon/online-book/z-libray.png';
 import MarksIcon from '@/assets/icon/online-book/makesi.gif';
 
 const onlineBookList = [
@@ -37,7 +38,18 @@ const onlineBookList = [
         icon: WereadIcon,
         link: 'https://weread.qq.com/',
         desc: '微信读书提供海量正版书籍、小说、漫画、公众号、听书，多设备同步实现跨屏阅读。与微信好友一起发现更多精品好书，随时交流感想，让阅读不再孤独。'
-      }
+      },
+      {
+        label: '鸠摩搜索',
+        link: 'https://www.jiumodiary.com/',
+        desc: 'Jiumo Search 鸠摩搜索 - 文档搜索引擎'
+      },
+      {
+        label: 'Z-Library',
+        icon: ZLibraryIcon,
+        link: 'https://zh.z-library.se/?ts=0621',
+        desc: 'Z-Library – 世界上最大的电子图书馆。自由访问知识和文化。'
+      },
     ],
   },
   {
