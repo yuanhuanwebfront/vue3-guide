@@ -42,6 +42,7 @@ const onlineBookList = [
       {
         label: '鸠摩搜索',
         link: 'https://www.jiumodiary.com/',
+        icon: 'https://www2.jiumodiary.com/images/front/eleps.png',
         desc: 'Jiumo Search 鸠摩搜索 - 文档搜索引擎'
       },
       {

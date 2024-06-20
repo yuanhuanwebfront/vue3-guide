@@ -6,6 +6,7 @@ import {
   NCard,
   NInput,
   NTag,
+  NTooltip,
   NMessageProvider,
   useMessage,
   useDialog
@@ -57,15 +58,15 @@ function copyTag(text){
 <template>
   <div class="copy-list">
     <template v-if="copyList.length > 0">
-      <TransitionGroup name="list">
-        <div class="flex-box align-start mb-20" v-for="(item, idx) in copyList" :key="idx">
-          <n-tag class="copy-tag mr-20" size="large" type="success" >{{ item }}</n-tag>
-          <n-button class="mr-12" type="info" @click="copyTag(item)">
-            <n-icon size="20">
-              <ClipboardPlus></ClipboardPlus>
-            </n-icon>
-            <span class="hide-text">&nbsp;复制</span>
-          </n-button>
+      <!-- <TransitionGroup name="list"> -->
+        <div class="flex-box align-center mb-20" v-for="(item, idx) in copyList" :key="idx">
+          <n-tooltip>
+            <template #trigger placement="left-start" trigger="hover">
+              <div class="copy-tag mr-20" size="large" type="success" @click="copyTag(item)">{{ item }}</div>
+            </template>
+            <span>点击复制</span>
+          </n-tooltip>
+          
           <n-button type="error" @click="deleteTag(idx)">
             <n-icon size="20">
               <CircleX></CircleX>
@@ -73,7 +74,7 @@ function copyTag(text){
             <span class="hide-text">&nbsp;删除</span>
           </n-button>
         </div>
-      </TransitionGroup>
+      <!-- </TransitionGroup> -->
     </template>
     <template v-else>
       <EmptyArea width="100%" height="100vh" size="80"></EmptyArea>
@@ -92,7 +93,7 @@ function copyTag(text){
     >
       <n-input
         v-model:value="copyText"
-        type="text"
+        type="textarea"
         size="large"
         placeholder="请输入复制文本"
       />
@@ -132,6 +133,13 @@ function copyTag(text){
   flex-grow: 1;
   line-height: 34px;
   overflow: hidden;
+  cursor: pointer;
+  white-space: pre-line;
+  border: 1px solid #18a058;
+  background-color: #daf0e4;
+  padding: 6px;
+  border-radius: 8px;
+  line-height: 20px;
 }
 .hover-btn{
   transition: 0.8s;
