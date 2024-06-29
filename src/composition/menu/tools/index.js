@@ -2,6 +2,7 @@
 import ChartGptIcon from '@/assets/icon/tools/chartGpt.png';
 import WenxinyiyanIcon from '@/assets/icon/tools/wenxinyiyan.png';
 import CopyBoardIcon from '@/assets/icon/tools/copyboard.png';
+import TimeStampIcon from '@/assets/icon/tools/timestamp.png';
 
 const toolsList = [
   {
@@ -30,6 +31,13 @@ const toolsList = [
         type: 'page',
         link: '/tools/copyBoard',
         desc: '用来记录和存储一些常用的文案，方便快速复制'
+      },
+      {
+        label: '时间戳转换工具',
+        icon: TimeStampIcon,
+        type: 'page',
+        link: '/tools/timestamp',
+        desc: '时间戳转换工具，方便快速转换时间戳'
       }
     ]
   }

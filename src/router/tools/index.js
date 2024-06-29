@@ -6,6 +6,10 @@ const ToolsRoutes = [
   {
     path: '/tools/copyBoard',
     component: () => import('@/pages/tools/copyboard/index.vue')
+  },
+  {
+    path: '/tools/timeStamp',
+    component: () => import('@/pages/tools/timeStamp/index.vue')
   }
 ]
 
