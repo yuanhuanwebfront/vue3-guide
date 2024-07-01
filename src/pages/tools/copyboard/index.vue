@@ -139,7 +139,8 @@ function copyTag(text){
   background-color: #daf0e4;
   padding: 6px;
   border-radius: 8px;
-  line-height: 20px;
+  line-height: 28px;
+  color: #18a058;
 }
 .hover-btn{
   transition: 0.8s;
