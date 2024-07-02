@@ -32,7 +32,7 @@
 <style lang="scss" scoped>
   .sidebar-container{
     position: relative;
-    width: 260px;
+    width: 220px;
     min-height: 100vh;
     align-items: stretch;
     overflow: visible;
