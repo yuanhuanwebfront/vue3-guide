@@ -1,8 +1,9 @@
 <script setup>
-
+  import NavBar from './NavBar/index.vue';
 </script>
 
 <template>
+  <NavBar></NavBar>
   <div class="router-container">
       <router-view v-slot="{Component}">
         <component :is="Component"></component>
@@ -17,18 +18,6 @@
   background-color: #fff;
   flex-grow: 1;
   padding: 20px;
+  padding-top: 60px;
 }
-// .slide-fade-enter-active {
-//   transition: all 0.3s ease-out;
-// }
-
-// .slide-fade-leave-active {
-//   transition: all 0.3s linear;
-// }
-
-// .slide-fade-enter-from,
-// .slide-fade-leave-to {
-//   transform: scale(0.5);
-//   opacity: 0;
-// }
 </style>
