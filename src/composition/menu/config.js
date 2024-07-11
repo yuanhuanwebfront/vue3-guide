@@ -1,52 +1,26 @@
 import onlineVideoConfig from "@/config/menu/onlineVideo";
 import onlineBooksConfig from "@/config/menu/onlineBooks";
+import videoDownloadConfig from "@/config/menu/videoDownload";
+import govermentConfig from '@/config/menu/goverment';
+import ToolsConfig from '@/config/menu/tool';
 
-import videoDownloadList from "./video-download";
-import govermentList from "./goverment";
-import toolsList from './tools';
-
-const menuOptions = [
-  {
-    label: onlineVideoConfig[0].meta.title,
-    path: onlineVideoConfig[0].path,
-    icon: onlineVideoConfig[0].meta.icon,
-    list: [
-      ...onlineVideoConfig[0].navList
-    ]
-  },
-  {
-    label: onlineBooksConfig[0].meta.title,
-    path: onlineBooksConfig[0].path,
-    icon: onlineBooksConfig[0].meta.icon,
-    list: [
-      ...onlineBooksConfig[0].navList
-    ]
-  },
-  {
-    label: '视频下载',
-    path: '/video-download',
-    icon: 'icon-video-download-line',
-    list: [
-      ...videoDownloadList
-    ]
-  },
-  {
-    label: '政务部门',
-    path: '/goverment',
-    icon: 'icon-goverment',
-    list: [
-      ...govermentList
-    ]
-  },
-  {
-    label: '实用工具',
-    path: '/tools',
-    icon: 'icon-gongju-',
-    list: [
-      ...toolsList
-    ]
-  }
+const ALL_MENU_OPTIONS = [
+  onlineVideoConfig[0],
+  onlineBooksConfig[0],
+  videoDownloadConfig[0],
+  govermentConfig[0],
+  ToolsConfig[0],
 ];
 
+const menuOptions = ALL_MENU_OPTIONS.map(item => {
+  return {
+    label: item.meta.title,
+    path: item.path,
+    icon: item.meta.icon,
+    list: [
+      ...item.navList
+    ]
+  }
+})
 
 export default menuOptions;
