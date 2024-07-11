@@ -1,9 +1,7 @@
-const VideoDownloadRoutes = [
-  {
-    path: '/video-download',
-    component: () => import('@/pages/videoDownload/index.vue')
-  }
-]
+import videoDownloadConfigs from "@/config/menu/videoDownload";
+import { transformConfigToRoutes } from '@/util/util';
+
+const VideoDownloadRoutes = transformConfigToRoutes(videoDownloadConfigs)
 
 
 export default VideoDownloadRoutes;

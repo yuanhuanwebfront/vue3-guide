@@ -19,8 +19,7 @@
   top: 0;
   left: 220px;
   z-index: 999;
-  border-bottom: 1px solid #f1f1f1;
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  border-bottom: 1px solid #dbe0e5;
   .nav-inner{
     position: relative;
   }

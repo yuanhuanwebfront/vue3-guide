@@ -37,49 +37,40 @@
     align-items: stretch;
     overflow: visible;
     overflow-y: auto;
-    border-right: 1px solid #f1f1f1;
+    border-right: 1px solid #dbe0e5;
     background: #fff;
     flex-shrink: 0;
     .logo{
       width: 100%;
       height: 60px;
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: 1px solid #dbe0e5;
       box-sizing: border-box;
+      margin-bottom: 20px;
     }
     .tab-item{
       cursor: pointer;
       box-sizing: border-box;
-      height: 46px;
-      line-height: 46px;
+      height: 38px;
+      line-height: 38px;
       padding: 0 14px;
       letter-spacing: 1px;
       font-size: 16px;
       margin-bottom: 8px;
       .tab-inner{
         padding: 0 12px;
-        border-radius: 12px;
+        border-radius: 8px;
         color: #121625;
         transition: 0.6s;
         &:hover, &.active{
-          background-color: #f5f6f6;
+          background-color: #0085f9;
+          color: #fff;
         }
-      }
-      &.active{
-        // background-color: #a9d9e854;
       }
       .iconfont{
         margin-right: 12px;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
-    // .collapse-icon{
-    //   position: absolute;
-    //   right: 0;
-    //   top: 64px;
-    //   width: 30px;
-    //   color: #ccc;
-    //   transform: rotate(90deg);
-    // }
   }
 </style>

@@ -1,9 +1,6 @@
-const OnlineBookRoutes = [
-  {
-    path: '/online-book',
-    component: () => import('@/pages/onlineBook/index.vue')
-  }
-]
+import OnlineBooksConfigs from '@/config/menu/onlineBooks';
+import { transformConfigToRoutes } from '@/util/util';
 
+const OnlineBooksRoutes = transformConfigToRoutes(OnlineBooksConfigs)
 
-export default OnlineBookRoutes;
+export default OnlineBooksRoutes;

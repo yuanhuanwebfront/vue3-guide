@@ -1,9 +1,6 @@
-const GovermentRoutes = [
-  {
-    path: '/goverment',
-    component: () => import('@/pages/goverment/index.vue')
-  }
-]
+import GovermentConfigs from "@/config/menu/goverment";
+import { transformConfigToRoutes } from '@/util/util';
 
+const GovermentRoutes = transformConfigToRoutes(GovermentConfigs)
 
 export default GovermentRoutes;
