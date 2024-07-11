@@ -25,5 +25,12 @@ const router = createRouter({
   ]
 })
 
+
+router.afterEach((to, from) => {
+  if(to.meta && to.meta.title){
+    document.title = `Anything - ${to.meta.title}`;
+  }
+})
+
 export default router;
 
