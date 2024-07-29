@@ -46,6 +46,13 @@ const tools = [
             type: 'page',
             link: '/tools/timestamp',
             desc: '时间戳转换工具，方便快速转换时间戳'
+          },
+          {
+            label: '贝壳成交记录',
+            icon: CopyBoardIcon,
+            type: 'page',
+            link: '/tools/beike',
+            desc: '贝壳成交记录，方便快速记录贝壳成交信息'
           }
         ]
       }
@@ -64,7 +71,14 @@ const tools = [
       title: '实用工具 / 时间戳转换'
     },
     component: () => import('@/pages/tools/timeStamp/index.vue')
-  }
+  },
+  {
+    path: '/tools/beike',
+    meta: {
+      title: '实用工具 / 成交量记录'
+    },
+    component: () => import('@/pages/tools/beike/index.vue')
+  },
 ]
 
 
