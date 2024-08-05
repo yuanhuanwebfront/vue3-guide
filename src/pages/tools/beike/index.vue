@@ -14,9 +14,14 @@ let options = {
   title: {
     text: '成交记录'
   },
-  tooltip: {
-
-  },
+  dataZoom: [
+    {
+      id: 'dataZoomX',
+      type: 'slider',
+      xAxisIndex: [0],
+      filterMode: 'filter'
+    },
+  ],
   legend: {
     data: ['二期挂牌', '二期已售', '五期挂牌', '五期已售', '六期挂牌', '六期已售'],
     selectedMode: true
@@ -24,7 +29,7 @@ let options = {
   grid: {
     left: '2%',
     right: '3%',
-    // bottom: '1%',
+    bottom: '2%',
     containLabel: true
   },
   xAxis: {
@@ -121,7 +126,7 @@ function handleChange(val) {
     ser.type = val ? 'bar' : 'line';
     ser.stack = val ? 'total' : '';
   })
-  console.log(options)
+
   if(chart) chart.setOption(options)
 }
 

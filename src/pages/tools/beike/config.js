@@ -54,6 +54,14 @@ export const configs = {
     five_sell: 42,
     six_hold: 134,
     six_sell: 36,
+  },
+  '2024-08-05': {
+    two_hold: 82,
+    two_sell: 46,
+    five_hold: 70,
+    five_sell: 42,
+    six_hold: 136,
+    six_sell: 36,
   }
 }
 
