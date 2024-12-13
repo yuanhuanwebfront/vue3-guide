@@ -16,3 +16,12 @@
 /* margin */
 .ml-16{margin-left: 16px;}
 .mr-16{margin-right: 16px;}
+
+
+/* padding */
+.pt-16{padding-top: 16px;}
+
+/* border */
+.border-b-main{
+  border-bottom: 1px solid #e4e7ec;
+}

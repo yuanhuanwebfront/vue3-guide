@@ -56,7 +56,7 @@ function copyTag(text){
 </script>
 
 <template>
-  <div class="copy-list">
+  <div class="copy-list pt-16">
     <template v-if="copyList.length > 0">
       <!-- <TransitionGroup name="list"> -->
         <div class="flex-box align-center mb-20" v-for="(item, idx) in copyList" :key="idx">

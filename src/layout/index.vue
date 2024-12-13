@@ -1,12 +1,11 @@
 <script setup>
-  import SideBar from './SideBar/index.vue';
-  import Content from './Content/index.vue';
+  // 组件直接使用  不需要components参数
+  import TopHeader from './TopHeader/index.vue';
 </script>
 
 <template>
-  <div class="flex layout-container">
-    <SideBar></SideBar>
-    <Content></Content>
+  <div class="layout-container">
+    <TopHeader></TopHeader>
   </div>
 </template>
 

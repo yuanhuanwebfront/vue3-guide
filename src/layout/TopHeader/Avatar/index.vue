@@ -30,9 +30,6 @@
 
 <style lang="scss" scoped>
   .avatar-img{
-    position: absolute;
-    top: 10px;
-    right: 20px;
     width: 40px;
     height: 40px;
   }

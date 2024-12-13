@@ -8,7 +8,7 @@
 </script>
 
 <template>
-  <div class="online-video-container">
+  <div class="tools-container">
     <div v-for="tab in cptPathMenus" :key="tab">
       <n-divider title-placement="left">
         <div class="font-24">{{ tab.label }}</div>

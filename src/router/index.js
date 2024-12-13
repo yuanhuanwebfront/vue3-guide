@@ -13,7 +13,6 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/layout/index.vue'),
-      redirect: '/online-video',
       children: [
         ...OnlineVideoRoutes,
         ...OnlineBookRoutes,
