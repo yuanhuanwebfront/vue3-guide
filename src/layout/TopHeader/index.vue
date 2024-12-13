@@ -6,7 +6,9 @@
 <template>
   <div class="top-header flex border-b-main">
     <img class="logo" src="@/assets/logo-1.png" />
+    <!-- 中间区域 -->
     <CenterMenu></CenterMenu>
+    <!-- 头像展示 -->
     <Avatar></Avatar>
   </div>
 </template>

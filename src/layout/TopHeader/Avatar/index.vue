@@ -22,8 +22,8 @@
     <template #trigger>
       <img class="avatar-img" :src="avatarInfo.icon" />
     </template>
-    <div class="img-list flex">
-      <img v-for="img in avatarList" :src="img.icon" @click="chooseAvatar(img)">
+    <div class="setting-list flex">
+      <div class="setting-item">设置</div>
     </div>
   </n-popover>
 </template>
@@ -33,18 +33,19 @@
     width: 40px;
     height: 40px;
   }
-  .img-list{
-    width: 180px;
-    display: grid;
-    grid-template-rows: repeat(2, 60px);
-    grid-template-columns: 60px 60px 60px;
-    background: #fff;
-    border-radius: 12px;
-    img{
-      width: 40px;
-      height: 40px;
-      margin-left: 10px;
-      flex-shrink: 0;
+  .setting-list{
+    width: 64px;
+    .setting-item{
+      height: 32px;
+      line-height: 32px;
+      cursor: pointer;
+      transition: 0.4s;
+      width: 100%;
+      text-align: center;
+      border-radius: 4px;
+      &:hover{
+        color: #4693eb;
+      }
     }
   }
 </style>
