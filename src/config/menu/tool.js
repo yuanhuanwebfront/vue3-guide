@@ -2,6 +2,7 @@ import ChartGptIcon from '@/assets/icon/tools/chartGpt.png';
 import WenxinyiyanIcon from '@/assets/icon/tools/wenxinyiyan.png';
 import CopyBoardIcon from '@/assets/icon/tools/copyboard.png';
 import TimeStampIcon from '@/assets/icon/tools/timestamp.png';
+import VarTransformIcon from '@/assets/icon/tools/var-transform.png';
 
 const tools = [
   {
@@ -48,12 +49,19 @@ const tools = [
             desc: '时间戳转换工具，方便快速转换时间戳'
           },
           {
-            label: '贝壳成交记录',
-            icon: CopyBoardIcon,
+            label: '变量名转换工具',
+            icon: VarTransformIcon,
             type: 'page',
-            link: '/tools/beike',
-            desc: '贝壳成交记录，方便快速记录贝壳成交信息'
-          }
+            link: '/tools/varTransform',
+            desc: '变量名转换工具，方便快速转换变量名'
+          },
+          // {
+          //   label: '贝壳成交记录',
+          //   icon: CopyBoardIcon,
+          //   type: 'page',
+          //   link: '/tools/beike',
+          //   desc: '贝壳成交记录，方便快速记录贝壳成交信息'
+          // }
         ]
       }
     ]
@@ -79,6 +87,13 @@ const tools = [
     },
     component: () => import('@/pages/tools/beike/index.vue')
   },
+  {
+    path: '/tools/varTransform',
+    meta: {
+      title: '实用工具 / 变量名转换'
+    },
+    component: () => import('@/pages/tools/varTransform/index.vue')
+  }
 ]
 
 

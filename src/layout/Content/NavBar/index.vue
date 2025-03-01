@@ -1,11 +1,11 @@
 <script setup>
-  import Avatar from './Avatar/index.vue';
+  // import Avatar from './Avatar/index.vue';
 </script>
 
 <template>
   <div class="navigation-bar">
     <div class="nav-inner">
-      <Avatar></Avatar>
+      <!-- <Avatar></Avatar> -->
     </div>
   </div>
 </template>
