@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'consolas';
+  src: url('@/assets/font/Consolas/consola-1.ttf') format('ttf'); /* 现代浏览器 */
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'pingfang';
+  src: url('@/assets/font/pingfang/pingfang.ttf') format('ttf');
+  font-weight: normal;
+}

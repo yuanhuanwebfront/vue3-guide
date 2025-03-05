@@ -9,13 +9,29 @@
   display: grid;
 }
 
+/* font */
+.fs-12{font-size: 12px;}
+.fs-14{font-size: 14px;}
+.fs-16{font-size: 16px;}
+.fs-18{font-size: 18px;}
+.fs-20{font-size: 20px;}
+.fs-22{font-size: 22px;}
+.fs-24{font-size: 24px;}
+
 /* text-position */
 .text-r{text-align: right;}
 
 
 /* margin */
+.ml-8{margin-left: 8px;}
+.ml-12{margin-left: 12px;}
 .ml-16{margin-left: 16px;}
+
+.mr-8{margin-right: 8px;}
 .mr-16{margin-right: 16px;}
+
+.mt-12{margin-top: 12px;}
+.mt-16{margin-top: 16px;}
 
 
 /* padding */

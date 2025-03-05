@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 // 路由
 import router from './router'
 
+import './style/font.css';
 import './style.css'
 import './style/common.css';
 import './style/animate.css';
