@@ -5,7 +5,10 @@ import CenterMenu from './CenterMenu/index.vue';
 
 <template>
   <div class="top-header flex">
-    <img class="logo" src="@/assets/logo-1.png" />
+    <div class="logo-area">
+      <img class="logo" src="@/assets/logo-1.png" />
+    </div>
+
     <!-- 中间区域 -->
     <CenterMenu></CenterMenu>
     <!-- 头像展示 -->
@@ -27,6 +30,10 @@ import CenterMenu from './CenterMenu/index.vue';
     rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
     rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
     rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+
+  .logo-area {
+    width: 200px;
+  }
 
   .logo {
     width: 80px;
