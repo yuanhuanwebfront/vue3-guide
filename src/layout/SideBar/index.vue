@@ -15,32 +15,16 @@ function pushRoute(rou) {
 </script>
 
 <template>
-  <aside class="sidebar">
-    <div class="logo-box">
-      <img class="logo" src="../../assets/logo.png">
-    </div>
-
+  <aside class="sidebar pt-24">
     <div>
-      <div class="tab-item fs-16 mt-12" v-for="(item, idx) in menus" :key="item.path" @click="pushRoute(item)">
-        <div class="inner" :class="{active: route.path.indexOf(item.path) > -1}">
-          <i class="iconfont ml-12 mr-8" :class="item.icon"></i> 
+      <div class="tab-item fs-16 mt-8" v-for="(item, idx) in menus" :key="item.path" @click="pushRoute(item)">
+        <div class="inner flex" :class="{active: route.path.indexOf(item.path) > -1}">
+          <i class="iconfont font-18 ml-12 mr-8" :class="item.icon"></i> 
           <span> {{ item.label }}</span>
         </div>
       </div>
     </div>
   </aside>
-  <!-- <div class="sidebar-container">
-    <img src="../../assets/logo.png" class="logo">
-
-    <div class="tab-item" @click="pushRoute(item)" :class="{first: idx == 0}" 
-      v-for="(item, idx) in menus" :key="item.path">
-      <div class="tab-inner flex" :class="{active: route.path.indexOf(item.path) > -1}">
-        <i class="iconfont" :class="item.icon"></i>
-        <span>{{ item.label }}</span>
-      </div>
-    </div>
-
-  </div> -->
 </template>
 
 <style lang="scss" scoped>
@@ -61,8 +45,8 @@ function pushRoute(rou) {
     line-height: 42px;
     padding: 0 12px;
     cursor: pointer;
-    transition: 0.4s;
     .inner{
+      transition: 0.6s;
       border-radius: 8px;
       &:hover, &.active{
         background-color: #e5f2f5;

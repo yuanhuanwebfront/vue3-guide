@@ -4,6 +4,6 @@
 	width: 220px;
 	transition: all .3s ease-in-out;
 	transform: translateX(0);
-	z-index: 9999999;
 	border-right: 1px solid #dbe0e5;
+	min-height: calc(100vh - 60px);
 }

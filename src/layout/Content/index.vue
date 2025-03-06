@@ -3,7 +3,6 @@
 </script>
 
 <template>
-  <NavBar></NavBar>
   <div class="router-container">
       <router-view v-slot="{Component}">
         <component :is="Component"></component>
@@ -13,11 +12,11 @@
 
 <style scoped lang="scss">
 .router-container{
-  min-height: 100vh;
+  height: calc(100vh - 60px);
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: #fff;
   flex-grow: 1;
   padding: 20px;
-  padding-top: 60px;
 }
 </style>
