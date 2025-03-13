@@ -80,8 +80,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 44px;
-      height: 44px;
+      width: 32px;
+      height: 32px;
       margin-right: 14px;
       flex-shrink: 0;
       border-radius: 10px;
@@ -102,8 +102,8 @@
       }
       
       img {
-        max-width: 28px;
-        max-height: 28px;
+        max-width: 24px;
+        max-height: 24px;
         transition: transform 0.3s ease;
         object-fit: contain;
         display: block;
